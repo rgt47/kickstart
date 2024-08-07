@@ -1,0 +1,30 @@
+extends r
+
+snippet rf "fence" Ab
+\`\`\`\{r \}
+$0
+\`\`\`
+endsnippet
+
+
+snippet sf "fence" Ab
+\`\`\`sh
+$0
+\`\`\`
+endsnippet
+
+
+snippet qmdh "qmd header" Ab
+---
+title: '$1'
+image: "img/$2"
+date: last-modified
+---
+
+::: column-margin
+![quarto](img/$2)
+:::
+
+# Introduction
+$0
+endsnippet

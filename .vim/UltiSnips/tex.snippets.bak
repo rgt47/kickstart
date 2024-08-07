@@ -1,0 +1,125 @@
+snippet "c([A-Z])" "math calligraphic" rA
+\mathcal{`!p snip.rv = match.group(1)`}
+endsnippet
+
+
+snippet binom "Binomial coefficient" A
+\binom { $1 } { $2 } $0
+endsnippet
+
+
+snippet test "Binomial coefficient" b
+\binom { $1 } { $2 } $0
+endsnippet
+
+global !p
+def math():
+        return vim.eval('vimtex#syntax#in_mathzone()') == '1'
+
+def comment():
+        return vim.eval('vimtex#syntax#in_comment()') == '1'
+
+def env(name):
+        [x,y] = vim.eval("vimtex#env#is_inside('" + name + "')")
+        return x != '0' and y != '0'
+
+endglobal
+
+context "math()"
+snippet // "Fraction" iA
+\\frac{$1}{$2}$0
+endsnippet
+
+
+snippet dm "display math mode" wA
+\[
+${1:${VISUAL}}
+.\] $0
+endsnippet
+
+
+snippet $$ "inline math mode" Ai
+\$
+	$0
+\$
+endsnippet
+
+
+snippet simple "simple template for short documents" bA
+\documentclass[11pt]{article}
+
+%---Common packages for LaTeX documents--- 
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{amsthm}
+\usepackage[all]{xy}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{verbatim}
+\usepackage{tikz-cd}
+
+%---User defined commands-----------------
+
+
+%---User defined environments-------------
+
+\newtheorem{theorem}{Theorem}[section]
+\theoremstyle{definition}
+\theoremstyle{plain}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{plain}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\theoremstyle{plain} 
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{example}[theorem]{Example}
+
+\title{$1}
+\author{$2}
+
+\begin{document}
+\maketitle
+
+$0
+
+\nocite{*}
+\bibliography{${3:`!p snip.rv = snip.basename`}}
+\bibliographystyle{plain}
+\end{document}
+endsnippet
+
+snippet sec "Section"
+\section{${1:${VISUAL:section name}}}%
+\label{sec:${0:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+endsnippet
+
+snippet sec* "Section"
+\section*{${1:${VISUAL:section name}}}%
+\label{sec:${0:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+endsnippet
+
+snippet ssec "Subsection"
+\subsection{${1:${VISUAL:subsection name}}}%
+\label{sub:${0:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+endsnippet
+
+snippet ssec* "Subsection"
+\subsection*{${1:${VISUAL:subsection name}}}%
+\label{sub:${0:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+endsnippet
+
+snippet sssec "Subsubsection"
+\subsubsection{${1:${VISUAL:subsubsection name}}}%
+\label{ssub:${0:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+endsnippet
+
+snippet sssec* "Subsubsection"
+\subsubsection*{${1:${VISUAL:subsubsection name}}}%
+\label{ssub:${0:${1/\\\w+\{(.*?)\}|\\(.)|(\w+)|([^\w\\]+)/(?4:_:\L$1$2$3\E)/ga}}}
+endsnippet
+

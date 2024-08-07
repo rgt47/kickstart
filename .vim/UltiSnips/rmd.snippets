@@ -1,0 +1,76 @@
+snippet rmdh "research report header" bA
+---
+title: "\\includegraphics[width=2cm, right]{sudoku_apple.pdf}\\newline 
+$1  New Report"
+author: "R.G. Thomas"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+fontsize: 11pt
+geometry: "left=3cm,right=5cm,top=2cm,bottom=2cm"
+output:
+  pdf_document:
+    keep_tex: true 
+    includes:
+header-includes:
+  - \usepackage{fontspec}
+  - \setmainfont{Helvetica}
+   - \usepackage{lipsum}
+   - \usepackage[export]{adjustbox}
+   - \usepackage{currfile}
+   - \usepackage{fancyhdr}
+   - \pagestyle{fancy}
+   - \setlength{\headheight}{14pt}
+   - \fancyfoot[L]{\currfilename} %put date in header
+   - \fancyfoot[R]{\includegraphics[width=.8cm]{sudoku_apple.pdf}}
+   - \fancyhead[L]{\today} %put current file in footer
+   - \fancyhead[R]{$2  RGT Lab report}
+latex_engine: xelatex
+---
+$0
+endsnippet
+
+snippet rmdb "research report bibliography" bA
+\bibliography{$1.bib}
+\bibliographystyle{plain}
+\nocite{*}
+
+endsnippet
+
+
+snippet rmdc "initial R chunk" bA
+\`\`\`{r include=F, echo=F}
+# clear env: objects and packages
+rm(list = ls())
+options(
+  knitr.kable.NA = "", dplyr.print_max = 1e9, knitr.table.format = "latex"
+)
+library(pacman)
+p_load(datapasta, janitor, kableExtra, tidyverse, knitr,  readxl)
+
+opts_chunk$set(
+  warning = FALSE, message = FALSE, echo = FALSE, fig.width = 3.2,
+  fig.height = 3, results = "asis", dev = "pdf")
+source("~/shr/zz.tools.R")
+options(scipen = 1, digits = 2)
+\`\`\`
+$0
+endsnippet
+
+extends r
+
+snippet ff "fence" Ab
+\`\`\`\{r \}
+$0
+\`\`\`
+endsnippet
+
+snippet rf "reverse fence" Ab
+\`\`\`
+$0
+\`\`\`\{r \}
+endsnippet
+
+snippet lb "library" Ab
+library($1)
+$0	
+endsnippet
+

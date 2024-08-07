@@ -1,0 +1,116 @@
+extends rmd,r
+priority -50
+
+global !p
+
+texMathZones = ['texMathRegion' + x for x in ['', 'X', 'XX', 'Env', 'EnvStarred', 'Ensured']]
+texIgnoreMathZones = ['texMathTextArg']
+
+texMathZoneIds = vim.eval('map('+str(texMathZones)+", 'hlID(v:val)')")
+texIgnoreMathZoneIds = vim.eval('map('+str(texIgnoreMathZones)+", 'hlID(v:val)')")
+
+ignore = texIgnoreMathZoneIds[0]
+
+def math():
+	synstackids = vim.eval("synstack(line('.'), col('.') - (col('.')>=2 ? 1 : 0))")
+	try:
+		first = next(i for i in reversed(synstackids) if i in texIgnoreMathZoneIds or i in texMathZoneIds)
+		return first != ignore
+	except StopIteration:
+		return False
+
+
+def create_matrix_n(snip):
+	mac = re.search('(\w)mat(\d+)x(\d+)', snip.buffer[snip.line])
+	mc = mac.group(1)
+	rows = int(mac.group(2))
+	cols = int(mac.group(3))
+	offset = cols + 1
+	old_spacing = snip.buffer[snip.line][:snip.buffer[snip.line].rfind('\t') + 1]
+
+
+	final_str = snip.buffer[snip.line][0:-len(mac.group(0))] + "\\begin{" + mc + "matrix}\n"
+
+
+	snip.buffer[snip.line] = ''
+	for i in range(rows):
+		final_str += old_spacing + '\t'
+		final_str += " & ".join(['$' + str(i * cols + j + offset) for j in range(cols)])
+
+		final_str += " \\\\\\\n"
+
+	final_str += old_spacing + "\\end{" + mc + "matrix}$0"
+
+	snip.expand_anon(final_str)
+
+
+
+endglobal
+
+
+pre_expand "create_matrix_n(snip)"
+snippet "(\w)mat(\d+)x(\d+)" "Generate matrix of *width* by *height*" rb
+endsnippet
+
+snippet sec "Section" b
+\section{${1:name}}
+$2
+endsnippet
+
+snippet ssec "Subsection" b
+\subsection{${1:name}}
+$2
+endsnippet
+
+snippet sssec "Subsubsection" b
+\subsubsection{${1:name}}
+$2
+endsnippet
+
+snippet simple "simple template for short documents" bA
+\documentclass[11pt]{article}
+
+%---Common packages for LaTeX documents---
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{amsthm}
+\usepackage[all]{xy}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{verbatim}
+\usepackage{tikz-cd}
+
+%---User defined commands-----------------
+
+
+%---User defined environments-------------
+
+\newtheorem{theorem}{Theorem}[section]
+\theoremstyle{definition}
+\theoremstyle{plain}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{plain}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\theoremstyle{plain}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{example}[theorem]{Example}
+
+\title{$1}
+\author{$2}
+
+\begin{document}
+\maketitle
+
+$0
+
+\nocite{*}
+\bibliography{${3:`!p snip.rv = snip.basename`}}
+\bibliographystyle{plain}
+\end{document}
+endsnippet

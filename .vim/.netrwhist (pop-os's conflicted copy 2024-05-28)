@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/Users/zenn/Dropbox/prj/c95/extension'
+let g:netrw_dirhist_6='/Users/zenn/Dropbox/prj/c97'
+let g:netrw_dirhist_5='/Users/zenn/Dropbox/prj'
+let g:netrw_dirhist_4='/Users/zenn/Dropbox/prj/c95'
+let g:netrw_dirhist_3='/Users/zenn/Dropbox/prj/c95/extension'
+let g:netrw_dirhist_2='/home/z/Dropbox/prj/c101'
+let g:netrw_dirhist_1='/Users/zenn/.mutt/cache'
+let g:netrw_dirhist_0='/Users/zenn/Dropbox/bin'
+let g:netrw_dirhist_9='/Users/zenn/.mutt'
+let g:netrw_dirhist_8='/Users/zenn'

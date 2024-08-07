@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/Users/zenn/Library/CloudStorage/Dropbox/sandbox/tidytuesday/one'
+let g:netrw_dirhist_3='/Users/zenn'
+let g:netrw_dirhist_2='/Users/zenn/Library/CloudStorage/Dropbox/prj/qblog/posts/vim_plugin_zz.tools.vim-R/rgt-R/plugin'
+let g:netrw_dirhist_1='/Users/zenn/Dropbox/dotfiles/.vim/UltiSnips'
+let g:netrw_dirhist_0='/Users/zenn/Library/CloudStorage/Dropbox/dotfiles'
+let g:netrw_dirhist_9='/Users/zenn/Library/CloudStorage/Dropbox/prj/c245'
+let g:netrw_dirhist_8='/Users/zenn/Library/CloudStorage/Dropbox/dotfiles'
+let g:netrw_dirhist_7='/Users/zenn/Library/CloudStorage/Dropbox/prj/qblog/posts/share_R_code_via_docker'
+let g:netrw_dirhist_6='/Users/zenn/Library/CloudStorage/Dropbox/prj'
+let g:netrw_dirhist_5='/Users/zenn/Library/CloudStorage/Dropbox/prj/c203/bayesian_analysis'
