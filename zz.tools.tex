@@ -1,0 +1,408 @@
+
+\definecolor{light-gray}{gray}{0.95}
+\definecolor{postit}{RGB}{255,255,102}
+
+%\newcommand\zztext[1]{
+%\noindent
+%\setlength{\fboxrule}{0.8pt}
+%\fcolorbox{black}{postit}{ 
+%\begin{minipage}{2.3in}
+%#1
+%\end{minipage} }}
+
+%\newcommand\martext[1]{
+%\begin{marginfigure}
+%\zztext{#1}
+%\end{marginfigure}
+%}
+
+
+
+
+\newcommand\twobytwo[8]{
+\noindent
+\begin{minipage}{\textwidth}
+\centering
+\captionsetup{justification=raggedright}
+\noindent
+\begin{minipage}[t]{.35\textwidth}
+\includegraphics[valign=t,width=\linewidth,height=.3\textheight, keepaspectratio]{#1}
+\captionof{figure}{#2}
+\end{minipage}\hfill
+\begin{minipage}[t]{.6\textwidth}
+\includegraphics[valign=t,width=\linewidth,height=.6\textheight,keepaspectratio]{#3}
+\captionof{figure}{#4}
+\end{minipage}\hfill
+\\
+\vspace{.5cm}
+\begin{minipage}[t]{.35\textwidth}
+\includegraphics[valign=t,width=\linewidth,height=.3\textheight,keepaspectratio]{#5}
+\captionof{figure}{#6}
+\end{minipage}\hfill
+\begin{minipage}[t]{.6\textwidth}
+\includegraphics[valign=t,width=\linewidth,height=.3\textheight,keepaspectratio]{#7}
+\captionof{figure}{#8}
+\end{minipage}\hfill
+\end{minipage}\hfill
+\\
+}
+
+
+
+
+
+
+
+\newcommand\threebytwo[6]{
+\noindent
+\begin{minipage}{\textwidth}
+\centering
+\captionsetup{justification=raggedright}
+\noindent
+\begin{minipage}[t]{.5\textwidth}
+\includegraphics[valign=t,width=\linewidth,height=.3\textheight, keepaspectratio]{#1}
+\end{minipage}\hfill
+\begin{minipage}[t]{.5\textwidth}
+\includegraphics[valign=t,width=\linewidth,height=.3\textheight,keepaspectratio]{#2}
+\end{minipage}\hfill
+\\
+\vspace{.5cm}
+\begin{minipage}[t]{.5\textwidth}
+\includegraphics[valign=t,width=\linewidth,height=.3\textheight,keepaspectratio]{#3}
+\end{minipage}\hfill
+\begin{minipage}[t]{.5\textwidth}
+\includegraphics[valign=t,width=\linewidth,height=.3\textheight, keepaspectratio]{#4}
+\end{minipage}\hfill
+\\
+\vspace{.5cm}
+\begin{minipage}[t]{.5\textwidth}
+\includegraphics[valign=t,width=\linewidth,height=.3\textheight,keepaspectratio]{#5}
+\end{minipage}\hfill
+\begin{minipage}[t]{.5\textwidth}
+\includegraphics[valign=t,width=\linewidth,height=.3\textheight,keepaspectratio]{#6}
+\end{minipage}\hfill
+\end{minipage}\hfill
+\\
+}
+
+\newcommand\threebythree[9]{
+\noindent
+\begin{minipage}{\textwidth}
+\centering
+\captionsetup{justification=raggedright}
+\noindent
+\begin{minipage}[t]{.33\textwidth}
+\includegraphics[valign=t,width=\linewidth,height=.3\textheight, keepaspectratio]{#1}
+\end{minipage}\hfill
+\begin{minipage}[t]{.33\textwidth}
+\includegraphics[valign=t,width=\linewidth,height=.3\textheight,keepaspectratio]{#2}
+\end{minipage}\hfill
+\begin{minipage}[t]{.33\textwidth}
+\includegraphics[valign=t,width=\linewidth,height=.3\textheight,keepaspectratio]{#3}
+\end{minipage}\hfill
+\\
+\vspace{.5cm}
+\begin{minipage}[t]{.33\textwidth}
+\includegraphics[valign=t,width=\linewidth,height=.3\textheight, keepaspectratio]{#4}
+\end{minipage}\hfill
+\begin{minipage}[t]{.33\textwidth}
+\includegraphics[valign=t,width=\linewidth,height=.3\textheight,keepaspectratio]{#5}
+\end{minipage}\hfill
+\begin{minipage}[t]{.33\textwidth}
+\includegraphics[valign=t,width=\linewidth,height=.3\textheight,keepaspectratio]{#6}
+\end{minipage}\hfill
+\\
+\vspace{.5cm}
+\begin{minipage}[t]{.33\textwidth}
+\includegraphics[valign=t,width=\linewidth,height=.3\textheight, keepaspectratio]{#7}
+\end{minipage}\hfill
+\begin{minipage}[t]{.33\textwidth}
+\includegraphics[valign=t,width=\linewidth,height=.3\textheight,keepaspectratio]{#8}
+\end{minipage}\hfill
+\begin{minipage}[t]{.33\textwidth}
+\includegraphics[valign=t,width=\linewidth,height=.3\textheight,keepaspectratio]{#9}
+\end{minipage}\hfill
+\end{minipage}\hfill
+\\
+}
+
+
+
+\newcommand\onebytwo[4]{
+\noindent
+\begin{minipage}{\textwidth}
+\centering
+\captionsetup{justification=raggedright}
+\noindent
+
+\begin{minipage}[t]{.5\textwidth}
+\includegraphics[valign=t,width=\linewidth,height=.3\textheight, keepaspectratio]{#1}
+\captionof{figure}{#2}
+\end{minipage}\hfill
+\begin{minipage}[t]{.5\textwidth}
+\includegraphics[valign=t,width=\linewidth,height=.3\textheight,keepaspectratio]{#3}
+\captionof{figure}{#4}
+\end{minipage}\hfill
+\end{minipage}\hfill
+\\
+}
+
+\newcommand\onebythree[6]{
+\noindent
+\begin{minipage}{\textwidth}
+\centering
+\captionsetup{justification=raggedright}
+\noindent
+\begin{minipage}[c]{18cm}
+\includegraphics[valign=t,width=\linewidth,height=.3\textheight, keepaspectratio]{#1}
+\captionof{figure}{#2}
+\end{minipage}\hfill
+\begin{minipage}[c]{6cm}
+\includegraphics[valign=t,width=\linewidth,height=.3\textheight, keepaspectratio]{#3}
+\captionof{figure}{#4}
+\end{minipage}\hfill\vspace{.5in}
+\begin{minipage}[c]{6cm}
+\includegraphics[valign=t,width=\linewidth,height=.3\textheight,keepaspectratio]{#5}
+\captionof{figure}{#6}
+\end{minipage}\hfill
+\end{minipage}\hfill
+\\
+}
+
+
+
+
+\newcommand\threebyone[6]{
+\noindent
+\begin{minipage}{\textwidth}
+\centering
+\captionsetup{justification=raggedright}
+\noindent
+
+\begin{minipage}[c]{\textwidth}
+\centering
+	\tcbox[left=0mm,right=0mm,top=0mm,bottom=0mm,colback=white]{
+\includegraphics[valign=t,width=\linewidth,height=.3\textheight, keepaspectratio]{#1}}
+\captionof{figure}{#2}
+\end{minipage}\hfill
+\begin{minipage}[c]{\textwidth}
+\centering
+\includegraphics[valign=t,width=\linewidth,height=.3\textheight, keepaspectratio]{#3}
+\captionof{figure}{#4}
+\end{minipage}\hfill
+\begin{minipage}[c]{\textwidth}
+\centering
+\includegraphics[valign=t,width=\linewidth,height=.3\textheight,keepaspectratio]{#5}
+\captionof{figure}{#6}
+\end{minipage}\hfill
+\end{minipage}\hfill
+\\
+}
+
+
+
+\newenvironment{changemargin}[2]{%
+  \begin{list}{}{%
+    \setlength{\topsep}{0pt}%
+    \setlength{\leftmargin}{#1}%
+    \setlength{\rightmargin}{#2}%
+    \setlength{\listparindent}{\parindent}%
+    \setlength{\itemindent}{\parindent}%
+    \setlength{\parsep}{\parskip}%
+  }%
+  \item[]}{\end{list}}
+
+
+
+\newcommand\bigtwobytwo[8]{
+\noindent
+\makebox[\textwidth]{%
+  \begin{minipage}{18cm}
+  \centering
+\captionsetup{justification=raggedright}
+\noindent
+  \begin{minipage}[t]{9cm}
+  \includegraphics[width=\textwidth]{#1}
+\captionof{figure}{#2}
+  \end{minipage}\hfill
+  \begin{minipage}[t]{9cm}
+  \includegraphics[width=\textwidth]{#3}
+\captionof{figure}{#4}
+  \end{minipage}\hfill
+  \vspace{1cm}%
+\noindent%
+  \begin{minipage}[c]{9cm}
+\begin{flushleft}
+  \includegraphics[width=\textwidth]{#5}
+\captionof{figure}{#6}
+\end{flushleft}
+  \end{minipage}\hfill
+  \begin{minipage}[c]{9cm}
+  \includegraphics[width=\textwidth]{#7}
+\captionof{figure}{#8}
+  \end{minipage}\hfill
+  \end{minipage}%
+}}
+
+
+
+\newcommand\twobythree[6]{
+\noindent
+\begin{minipage}{\textwidth}
+\centering
+\captionsetup{justification=raggedright}
+\noindent
+\begin{minipage}[t]{.3\textwidth}
+\includegraphics[valign=t,width=\linewidth,height=.3\textheight, keepaspectratio]{#1}
+\end{minipage}\hfill
+\begin{minipage}[t]{.3\textwidth}
+\includegraphics[valign=t,width=\linewidth,height=.3\textheight,keepaspectratio]{#2}
+\end{minipage}\hfill
+\begin{minipage}[t]{.3\textwidth}
+\includegraphics[valign=t,width=\linewidth,height=.3\textheight,keepaspectratio]{#3}
+\end{minipage}\hfill
+\\
+\vspace{.5cm}
+\begin{minipage}[t]{.3\textwidth}
+\includegraphics[valign=t,width=\linewidth,height=.3\textheight,keepaspectratio]{#4}
+\end{minipage}\hfill
+\begin{minipage}[t]{.3\textwidth}
+\includegraphics[valign=t,width=\linewidth,height=.3\textheight,keepaspectratio]{#5}
+\end{minipage}\hfill
+\begin{minipage}[t]{.3\textwidth}
+\includegraphics[valign=t,width=\linewidth,height=.3\textheight,keepaspectratio]{#6}
+\end{minipage}\hfill
+\end{minipage}\hfill
+\\
+}
+
+
+
+\newcommand\bigonebytwo[4]{
+\noindent
+\makebox[\textwidth]{%
+  \begin{minipage}{18cm}
+  \centering
+\captionsetup{justification=raggedright}
+\noindent
+  \begin{minipage}[t]{9cm}
+  \includegraphics[width=\textwidth]{#1}
+\captionof{figure}{#2}
+  \end{minipage}\hfill
+  \begin{minipage}[t]{9cm}
+  \includegraphics[width=\textwidth]{#3}
+\captionof{figure}{#4}
+  \end{minipage}\hfill
+  \end{minipage}%
+}}
+
+
+\newcommand\bigonebythree[6]{
+\noindent
+\makebox[\textwidth]{%
+  \begin{minipage}{18cm}
+  \centering
+\captionsetup{justification=raggedright}
+\noindent
+  \begin{minipage}[c]{6cm}
+  \includegraphics[width=\textwidth]{#1}
+\captionof{figure}{#2}
+  \end{minipage}\hfill
+  \begin{minipage}[c]{6cm}
+  \includegraphics[width=\textwidth]{#3}
+\captionof{figure}{#4}
+  \end{minipage}\hfill
+  \begin{minipage}[c]{6cm}
+  \includegraphics[width=\textwidth]{#5}
+\captionof{figure}{#6}
+  \end{minipage}\hfill
+  \end{minipage}%
+}}
+
+\newcommand\zzfigtex[4]{
+\noindent
+\begin{center} 
+\includegraphics[valign=t, width=#3, height=#4]{#1}
+\end{center} 
+\captionof{figure}{#2}
+}
+
+\newcommand\zztabtex[4]{
+\noindent
+\begin{center} 
+\includegraphics[valign=t,width=#3, height=#4]{#1}
+\end{center} 
+\captionof{table}{#2}
+}
+
+
+
+\newcounter{thumbnail}
+\newbox\savedimgs
+\setbox\savedimgs\vbox{}
+
+
+
+\newcommand{\thumbnailandappendix}[1]{%
+  \refstepcounter{thumbnail}
+  \hypertarget{small\thethumbnail}{}
+  \hyperlink{big\thethumbnail}{\includegraphics[valign=t,
+  width=\linewidth,height=.3\textheight, keepaspectratio]{#1}}
+  \global\setbox\savedimgs\vbox{%
+  \unvbox\savedimgs
+  \bigskip
+  \filbreak
+  \noindent
+  \hypertarget{big\thethumbnail}{}
+  \hyperlink{small\thethumbnail}{\includegraphics[width=19cm,height=14cm]{#1}}}
+  }
+
+
+
+\newcommand\onebytwothumb[4]{
+\begin{minipage}{\textwidth}
+\centering
+\captionsetup{justification=raggedright}
+\noindent
+\begin{minipage}[t]{.475\textwidth}
+\thumbnailandappendix{#1}
+\captionof{figure}{#2}
+\end{minipage}\hfill
+\begin{minipage}[t]{.475\textwidth}
+\thumbnailandappendix{#3}
+\captionof{figure}{#4}
+\end{minipage}\hfill
+\end{minipage}\hfill
+\\
+}
+
+
+
+\newcommand\twobytwothumb[8]{
+\noindent
+\begin{minipage}{\textwidth}
+\centering
+\captionsetup{justification=raggedright}
+\noindent
+\begin{minipage}[t]{.5\textwidth}
+\thumbnailandappendix{#1}
+\captionof{figure}{#2}
+\end{minipage}\hfill
+\begin{minipage}[t]{.45\textwidth}
+\thumbnailandappendix{#3}
+\captionof{figure}{#4}
+\end{minipage}\hfill
+\\
+\vspace{.5cm}
+\begin{minipage}[t]{.5\textwidth}
+\thumbnailandappendix{#5}
+\captionof{figure}{#6}
+\end{minipage}\hfill
+\begin{minipage}[t]{.45\textwidth}
+\thumbnailandappendix{#7}
+\captionof{figure}{#8}
+\end{minipage}\hfill
+\end{minipage}\hfill
+\\
+}
+
